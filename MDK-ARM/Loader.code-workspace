@@ -1,0 +1,40 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": ".."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "wy_mi2c.h": "c",
+            "wy_oled.h": "c",
+            "oled.h": "c",
+            "__functional_03": "cpp",
+            "functional": "cpp",
+            "memory": "cpp",
+            "vector": "cpp",
+            "typeindex": "cpp",
+            "map": "cpp",
+            "type_traits": "cpp",
+            "__hash_table": "cpp",
+            "__tree": "cpp",
+            "string": "cpp",
+            "unordered_map": "cpp",
+            "__bit_reference": "cpp",
+            "__split_buffer": "cpp",
+            "array": "cpp",
+            "string_view": "cpp",
+            "initializer_list": "cpp",
+            "iterator": "cpp",
+            "algorithm": "cpp",
+            "filesystem": "cpp"
+        },
+        "files.readonlyInclude": {
+            "{**/.c4z/.extsrcs/*.PROTSYM.cbl,**/.c4z/.extsrcs/*.PROTSYM.listing}": true
+        }
+    },
+    "extensions": {}
+}

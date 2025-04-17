@@ -1,0 +1,382 @@
+{
+  "name": "Loader",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Drivers",
+        "files": [],
+        "folders": [
+          {
+            "name": "CMSIS",
+            "files": [
+              {
+                "path": "../Core/Src/system_stm32g0xx.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "STM32G0xx_HAL_Driver",
+            "files": [
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_flash_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_gpio.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_cortex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_exti.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pcd.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pcd_ex.c"
+              },
+              {
+                "path": "../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_usb.c"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "User",
+            "files": [],
+            "folders": [
+              {
+                "name": "Core",
+                "files": [
+                  {
+                    "path": "../Core/Src/gpio.c"
+                  },
+                  {
+                    "path": "../Core/Src/dma.c"
+                  },
+                  {
+                    "path": "../Core/Src/spi.c"
+                  },
+                  {
+                    "path": "../Core/Src/usart.c"
+                  },
+                  {
+                    "path": "../Core/Src/usb_drd_fs.c"
+                  },
+                  {
+                    "path": "../Core/Src/stm32g0xx_it.c"
+                  },
+                  {
+                    "path": "../Core/Src/stm32g0xx_hal_msp.c"
+                  },
+                  {
+                    "path": "../Core/Src/main.cpp"
+                  },
+                  {
+                    "path": "../Core/Src/program.cpp"
+                  }
+                ],
+                "folders": [
+                  {
+                    "name": "Loader",
+                    "files": [
+                      {
+                        "path": "../Loader/loader.cpp"
+                      },
+                      {
+                        "path": "../Loader/loader.s"
+                      }
+                    ],
+                    "folders": []
+                  },
+                  {
+                    "name": "off-Chip",
+                    "files": [
+                      {
+                        "path": "../off-Chip/W25Qxx/W25Qxx.cpp"
+                      },
+                      {
+                        "path": "../off-Chip/W25Qxx/W25QxxStorageDevice.cpp"
+                      },
+                      {
+                        "path": "../off-Chip/IStorageDevice.h"
+                      }
+                    ],
+                    "folders": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MDK-ARM",
+            "files": [
+              {
+                "path": "startup_stm32g0b1xx.s"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      },
+      {
+        "name": "::CMSIS",
+        "files": [],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": "STM32G0B1CBTx",
+  "packDir": ".pack/Keil/STM32G0xx_DFP.1.5.0",
+  "miscInfo": {
+    "uid": "55a5558a4acc7346b8471c7d1dcfce97"
+  },
+  "targets": {
+    "loader": {
+      "excludeList": [
+        "<virtual_root>/Application/User/Core/OLED/Wy_MI2C.c",
+        "<virtual_root>/Application/User/Core/OLED/Wy_OLED_Font.c",
+        "<virtual_root>/Application/User/Core/OLED/Wy_OLED.c"
+      ],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M0+",
+        "floatingPointHardware": "none",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "RAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "RAM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "ROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "ROM",
+              "id": 3,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            },
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x8000000",
+                "size": "0x20000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            },
+            {
+              "tag": "IROM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x0",
+                "size": "0x0"
+              },
+              "isChecked": false,
+              "isStartup": false
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "STLink",
+      "uploadConfig": {
+        "bin": "",
+        "proType": "SWD",
+        "resetMode": "default",
+        "runAfterProgram": true,
+        "speed": 4000,
+        "address": "0x8000000",
+        "elFile": "None",
+        "optionBytes": ".eide/loader.st.option.bytes.ini",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".",
+          "../Core/Inc",
+          "../Drivers/STM32G0xx_HAL_Driver/Inc",
+          "../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy",
+          ".cmsis/include",
+          "RTE/_loader",
+          "../OLED",
+          "../off-Chip/W25Qxx",
+          "../off-Chip",
+          ".pack/Keil/STM32G0xx_DFP.1.5.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include",
+          "../Drivers/CMSIS/Device/ST/STM32G0xx/Include"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32G0B1xx"
+        ]
+      },
+      "builderOptions": {
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-image-size",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "one-elf-section-per-function": true,
+            "short-enums#wchar": true,
+            "warnings": "ac5-like-warnings",
+            "misc-controls": "-fno-exceptions -ffunction-sections -fdata-sections -fno-rtti"
+          },
+          "asm-compiler": {
+            "$use": "asm"
+          },
+          "linker": {
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}

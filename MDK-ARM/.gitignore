@@ -1,0 +1,17 @@
+# dot files
+/.vscode/launch.json
+/.settings
+/.eide/log
+
+# project out
+/build
+/bin
+/obj
+/out
+*.log
+
+# eide template
+*.ept
+*.eide-template
+
+/Drivers
