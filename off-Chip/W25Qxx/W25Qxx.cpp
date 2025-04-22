@@ -250,7 +250,7 @@ void W25Qxx::Config(W25Qxx_Instruction instruction, uint32_t address)
 void W25Qxx::Write(uint32_t address, size_t size, uint8_t* data)
 {
     uint8_t address_bytes[4];
-
+    
     Affairs(W25Qxx_Write_Enable);
     AddressBytes(address, address_bytes);
     Affairs(W25Qxx_Write_Data, address_len, address_bytes, size, data);

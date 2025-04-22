@@ -27,17 +27,18 @@ void W25QxxStorageDevice::EraseSector(uint32_t address, size_t size)
         uint32_t sector_address = start_sector_address + (0x1000 * i);
         flash.ResetRead();
         flash.Read(sector_address, buffer, 0x1000);
+        
         flash.EraseSector(sector_address);
         flash.WaitUntilReady();
         for (size_t il = 0; il < 8; il++)
         {
             uint32_t write_sector_address = sector_address + (512 * il);
-            if ((write_sector_address <(start_sector_address | logical_sector_address))||
-                write_sector_address >=((start_sector_address | logical_sector_address) +(size * 512)))
+            if ((write_sector_address <(start_sector_address + logical_sector_address))||
+                write_sector_address >=((start_sector_address + logical_sector_address) +(size * 512)))
             {
                 flash.Write(write_sector_address, 256, &buffer[(il * 512)]);
                 flash.WaitUntilReady();
-                flash.Write((write_sector_address + 256), 256, &buffer[(il * 512)+ 256]);
+                flash.Write(write_sector_address, 256, &buffer[(il * 512)+ 256]);
                 flash.WaitUntilReady();
             }
         }
@@ -86,9 +87,10 @@ W25Qxx& W25QxxStorageDevice::GetW25QxxInstance()
 
 W25QxxStorageDevice::~W25QxxStorageDevice()
 {
-    if (buffer == nullptr)return;
-    delete[] buffer;
-    buffer = nullptr;
+    if (buffer != nullptr) {
+        delete[] buffer;
+        buffer = nullptr;
+    }
 }
 
 
